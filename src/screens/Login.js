@@ -1,6 +1,7 @@
 import reactlogo from '../assets/react-logo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Image, Button, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function Login() {
     return (
@@ -20,7 +21,12 @@ function Login() {
                         </Form.Group>
                         <div className="d-grid gap-2">
                             <Button variant="primary" size="lg">
-                                Acessar
+                                <Link to={'/Home'} style={{ color: '#fff', textDecoration: 'none'}}>Acessar</Link>
+                            </Button>
+                        </div>
+                        <div className="d-grid gap-2 mt-2">
+                            <Button variant="danger" size="lg">
+                            <Link to={'/Register'} style={{ color: '#fff', textDecoration: 'none'}}>Cadastre-se</Link>
                             </Button>
                         </div>
                     </Form>
